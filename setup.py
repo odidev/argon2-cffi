@@ -27,7 +27,7 @@ elif use_sse2 == "0":
 else:
     # Optimized version requires SSE2 extensions.  They have been around since
     # 2001 so we try to compile it on every recent-ish x86.
-    optimized = platform.machine() in ("i686", "x86", "x86_64", "AMD64")
+    optimized = platform.machine() in ("i686", "x86", "x86_64", "AMD64", "aarch64")
 
 CFFI_MODULES = ["src/argon2/_ffi_build.py:ffi"]
 lib_base = os.path.join("extras", "libargon2", "src")
